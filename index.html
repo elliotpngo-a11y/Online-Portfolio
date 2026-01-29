@@ -68,7 +68,6 @@
         /* --- HERO SECTION --- */
         header {
             height: 90vh;
-            /* This image is a placeholder. You can change the URL to a photo of yourself later */
             background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), 
                         url('https://images.unsplash.com/photo-1552674605-469555942f74?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
@@ -130,7 +129,7 @@
             margin: 10px auto 0;
         }
 
-        /* --- DESCRIPTION / ABOUT --- */
+        /* --- ABOUT --- */
         .about-container {
             display: flex;
             flex-wrap: wrap;
@@ -191,6 +190,31 @@
             display: block;
         }
 
+        /* --- VIDEO STYLES --- */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .video-wrapper {
+            flex: 1;
+            min-width: 320px;
+            max-width: 500px;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 3px solid white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            background: #000;
+        }
+
         /* --- HOBBIES --- */
         #hobbies {
             background-color: white;
@@ -241,7 +265,7 @@
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Simplified for mobile */
+            .nav-links { display: none; } 
             section { padding: 3rem 5%; }
         }
     </style>
@@ -253,6 +277,7 @@
         <div class="nav-links">
             <a href="#about">Description</a>
             <a href="#strengths">Strengths</a>
+            <a href="#videos">Highlights</a>
             <a href="#hobbies">Hobbies</a>
             <a href="#contact">Contact</a>
         </div>
@@ -324,7 +349,21 @@
         </div>
     </section>
 
-    <section id="hobbies">
+    <section id="videos">
+        <h2>Track & Field Highlights</h2>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/1lfnwHSR406zLNYi8HiwK2tJAhOF71rZl/preview" allowfullscreen></iframe>
+                <p style="text-align: center; margin-top: 10px; font-weight: 600;">Race Highlight 1</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/10EsGup0fPsIytP0MQKg5vfm_jzZfRuOk/preview" allowfullscreen></iframe>
+                <p style="text-align: center; margin-top: 10px; font-weight: 600;">Race Highlight 2</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" style="background-color: #f1f5f9;">
         <h2>Hobbies & Interests</h2>
         <p style="text-align: center; margin-bottom: 2rem;">When I'm not on the track or in the lab, here is what I love to do.</p>
         <div class="hobbies-list">
