@@ -5,24 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Elliot</title>
     <style>
-        /* --- GENERAL STYLES --- */
         :root {
-            --primary: #0f172a; /* Dark Slate (Engineering feel) */
-            --accent: #f59e0b;  /* Gold/Amber (Track Energy) */
+            --primary: #0f172a; 
+            --accent: #f59e0b;  
             --light: #f8fafc;
             --gray: #64748b;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--primary);
@@ -43,16 +34,8 @@
             z-index: 1000;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .logo span { color: var(--accent); }
         .nav-links a {
             text-decoration: none;
             color: var(--primary);
@@ -60,16 +43,13 @@
             font-weight: 500;
             transition: color 0.3s;
         }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
+        .nav-links a:hover { color: var(--accent); }
 
         /* --- HERO SECTION --- */
         header {
             height: 90vh;
             background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), 
-                        url('https://images.unsplash.com/photo-1552674605-469555942f74?auto=format&fit=crop&w=1920&q=80');
+                        url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -82,16 +62,8 @@
             padding: 0 1rem;
         }
 
-        header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            color: #cbd5e1;
-            max-width: 600px;
-        }
+        header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        header p { font-size: 1.5rem; color: #cbd5e1; max-width: 600px; }
 
         .cta-btn {
             margin-top: 2rem;
@@ -103,166 +75,57 @@
             font-weight: bold;
             transition: transform 0.2s;
         }
+        .cta-btn:hover { transform: scale(1.05); }
 
-        .cta-btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* --- SECTIONS GENERAL --- */
-        section {
-            padding: 5rem 10%;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-        }
-
+        /* --- SECTIONS --- */
+        section { padding: 5rem 10%; }
+        h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; position: relative; }
         h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--accent);
-            margin: 10px auto 0;
+            content: ''; display: block; width: 60px; height: 4px;
+            background: var(--accent); margin: 10px auto 0;
         }
 
         /* --- ABOUT --- */
-        .about-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
+        .about-container { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
+        .about-text { flex: 1; min-width: 300px; }
         .about-stats {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
         }
-
         .stat-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: center;
+            background: white; padding: 1.5rem; border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center;
         }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--accent);
-            display: block;
-        }
-
-        /* --- STRENGTHS --- */
-        .strengths-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .strength-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            border-top: 5px solid var(--accent);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-
-        .strength-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .strength-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
+        .stat-number { font-size: 2rem; font-weight: bold; color: var(--accent); display: block; }
 
         /* --- VIDEO STYLES --- */
         .video-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            max-width: 1100px;
-            margin: 0 auto;
+            display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;
+            max-width: 1100px; margin: 0 auto;
         }
-
-        .video-wrapper {
-            flex: 1;
-            min-width: 320px;
-            max-width: 500px;
-        }
-
+        .video-wrapper { flex: 1; min-width: 320px; max-width: 500px; text-align: center; }
         .video-wrapper iframe {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            border: 3px solid white;
-            border-radius: 12px;
+            width: 100%; aspect-ratio: 16 / 9;
+            border: none; border-radius: 12px;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             background: #000;
         }
 
         /* --- HOBBIES --- */
-        #hobbies {
-            background-color: white;
-        }
-
-        .hobbies-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
+        .hobbies-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
         .hobby-tag {
-            background: var(--light);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            border: 1px solid #e2e8f0;
-            font-weight: 500;
+            background: white; padding: 0.8rem 1.5rem; border-radius: 50px;
+            border: 1px solid #e2e8f0; font-weight: 500;
         }
 
         /* --- CONTACT --- */
-        #contact {
-            background-color: var(--primary);
-            color: white;
-            text-align: center;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
+        #contact { background-color: var(--primary); color: white; text-align: center; }
+        .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
         .contact-btn {
-            color: white;
-            text-decoration: none;
-            border: 1px solid var(--accent);
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            transition: background 0.3s;
+            color: white; text-decoration: none; border: 1px solid var(--accent);
+            padding: 0.8rem 1.5rem; border-radius: 5px; transition: background 0.3s;
         }
+        .contact-btn:hover { background: var(--accent); }
 
-        .contact-btn:hover {
-            background: var(--accent);
-        }
-
-        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
             .nav-links { display: none; } 
@@ -275,119 +138,67 @@
     <nav>
         <div class="logo">Elliot<span>.</span></div>
         <div class="nav-links">
-            <a href="#about">Description</a>
-            <a href="#strengths">Strengths</a>
-            <a href="#videos">Highlights</a>
+            <a href="#about">About</a>
+            <a href="#projects">CS Projects</a>
             <a href="#hobbies">Hobbies</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header>
-        <h1>Engineering the Extra Mile</h1>
-        <p>Student Athlete | Aspiring Engineer | Mathematician</p>
-        <p style="font-size: 1rem; margin-top: 10px;">Track & Field • Cross Country</p>
-        <a href="#about" class="cta-btn">View My Portfolio</a>
+        <h1>Computer Science & Engineering</h1>
+        <p>Student Athlete | Coder | Mathematician</p>
+        <a href="#projects" class="cta-btn">View My Projects</a>
     </header>
 
     <section id="about">
-        <h2>About Elliot</h2>
+        <h2>About Me</h2>
         <div class="about-container">
             <div class="about-text">
-                <p>
-                    Hello! I am Elliot, a dedicated student-athlete with a passion for solving complex problems—whether that's calculating the optimal pace for a 5K or solving differential equations.
-                </p>
-                <br>
-                <p>
-                    My journey in Cross Country and Track has taught me that consistency and endurance are just as important in Engineering as they are on the field. I approach mathematics and physics with the same competitive mindset, always looking to optimize solutions and improve efficiency.
-                </p>
+                <p>I am Elliot, a student-athlete combining the discipline of Cross Country with the logic of Computer Science. I specialize in building efficient solutions and analyzing data to solve real-world engineering challenges.</p>
             </div>
             <div class="about-stats">
-                <div class="stat-card">
-                    <span class="stat-number">XC/TF</span>
-                    <span>Varsity Athlete</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">GPA</span>
-                    <span>4.0</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">Math</span>
-                    <span>Calculus & Stats</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">Eng</span>
-                    <span>Robotics / CAD</span>
-                </div>
+                <div class="stat-card"><span class="stat-number">4.0</span><span>GPA</span></div>
+                <div class="stat-card"><span class="stat-number">Python</span><span>Language</span></div>
+                <div class="stat-card"><span class="stat-number">CAD</span><span>Design</span></div>
+                <div class="stat-card"><span class="stat-number">XC</span><span>Varsity</span></div>
             </div>
         </div>
     </section>
 
-    <section id="strengths" style="background-color: #f1f5f9;">
-        <h2>My Strengths</h2>
-        <div class="strengths-grid">
-            <div class="strength-card">
-                <span class="strength-icon">🏃‍♂️</span>
-                <h3>Endurance & Discipline</h3>
-                <p>Trained in Cross Country to maintain focus under physical stress. This translates to academic resilience during long engineering projects.</p>
-            </div>
-            <div class="strength-card">
-                <span class="strength-icon">📐</span>
-                <h3>Mathematical Analysis</h3>
-                <p>Strong foundation in mathematics. I enjoy using data to analyze performance trends in both sports and physics.</p>
-            </div>
-            <div class="strength-card">
-                <span class="strength-icon">⚙️</span>
-                <h3>Engineering Mindset</h3>
-                <p>Experience with problem-solving frameworks. I approach challenges logically, breaking them down into solvable components.</p>
-            </div>
-            <div class="strength-card">
-                <span class="strength-icon">🤝</span>
-                <h3>Team Collaboration</h3>
-                <p>Understanding that a relay team or a cross country squad moves fastest when everyone supports each other. I am a team-first leader.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="videos">
-        <h2>Track & Field Highlights</h2>
+    <section id="projects" style="background-color: #f1f5f9;">
+        <h2>Computer Science Projects</h2>
         <div class="video-container">
             <div class="video-wrapper">
-                <iframe src="https://drive.google.com/file/d/1lfnwHSR406zLNYi8HiwK2tJAhOF71rZl/preview" allowfullscreen></iframe>
-                <p style="text-align: center; margin-top: 10px; font-weight: 600;">Race Highlight 1</p>
+                <iframe src="https://drive.google.com/file/d/1lfnwHSR406zLNYi8HiwK2tJAhOF71rZl/preview"></iframe>
+                <p style="margin-top: 15px; font-weight: 600;">System Implementation</p>
             </div>
             <div class="video-wrapper">
-                <iframe src="https://drive.google.com/file/d/10EsGup0fPsIytP0MQKg5vfm_jzZfRuOk/preview" allowfullscreen></iframe>
-                <p style="text-align: center; margin-top: 10px; font-weight: 600;">Race Highlight 2</p>
+                <iframe src="https://drive.google.com/file/d/10EsGup0fPsIytP0MQKg5vfm_jzZfRuOk/preview"></iframe>
+                <p style="margin-top: 15px; font-weight: 600;">Technical Demo</p>
             </div>
         </div>
     </section>
 
-    <section id="hobbies" style="background-color: #f1f5f9;">
+    <section id="hobbies">
         <h2>Hobbies & Interests</h2>
-        <p style="text-align: center; margin-bottom: 2rem;">When I'm not on the track or in the lab, here is what I love to do.</p>
         <div class="hobbies-list">
-            <div class="hobby-tag">Coding</div>
+            <div class="hobby-tag">Robotics</div>
             <div class="hobby-tag">3D Printing</div>
-            <div class="hobby-tag">Trail Running</div>
-            <div class="hobby-tag">Data Analysis</div>
-            <div class="hobby-tag">Strategic Gaming</div>
-            <div class="hobby-tag">Engineering Design</div>
+            <div class="hobby-tag">Distance Running</div>
+            <div class="hobby-tag">Game Dev</div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Get In Touch</h2>
-        <p>Interested in my work or want to talk track times? Feel free to reach out.</p>
-        
         <div class="contact-links">
             <a href="mailto:ngo7364@MYDUSD.ORG" class="contact-btn">Email Me</a>
-            <a href="#" class="contact-btn">LinkedIn</a>
-            <a href="#" class="contact-btn">Github</a>
+            <a href="#" class="contact-btn">View Resume</a>
+            <a href="#" class="contact-btn">GitHub</a>
         </div>
-
-        <footer style="margin-top: 3rem; font-size: 0.8rem; color: #94a3b8;">
-            <p>&copy; 2024 Elliot. All Rights Reserved.</p>
+        <footer style="margin-top: 3rem; font-size: 0.8rem; opacity: 0.6;">
+            <p>&copy; 2026 Elliot. All Rights Reserved.</p>
         </footer>
     </section>
 
