@@ -1,206 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Elliot</title>
-    <style>
-        :root {
-            --primary: #0f172a; 
-            --accent: #f59e0b;  
-            --light: #f8fafc;
-            --gray: #64748b;
-        }
+<section id="projects">
+    <h2>Computer Science & Engineering Projects</h2>
+    <p class="section-intro">
+        A portfolio of software engineering applications, logic challenges, and technical demonstrations developed throughout my computer science coursework.
+    </p>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--primary);
-            line-height: 1.6;
-            background-color: var(--light);
-        }
+    <div class="projects-grid">
 
-        /* --- NAVIGATION --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+        <div class="project-card">
+            <span class="project-tag">Software Development</span>
+            <h3>Project 1: 3.1.3 Combo Menu Customization Program</h3>
+            <p class="project-meta"><strong>Course:</strong> Computer Science Essentials | <strong>Date:</strong> Fall 2025</p>
+            
+            <h4>Project Objective</h4>
+            <p>
+                The objective of this project was to design and implement an interactive, automated terminal application that handles customer orders for a sandwich shop. The program calculates complex conditional pricing, handles user custom requests (like drink and fry size upgrades), validates input strings, and applies dynamic discount logic for combo meals.
+            </p>
 
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
-        .logo span { color: var(--accent); }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--primary);
-            margin-left: 2rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--accent); }
+            <h4>My Responsibilities</h4>
+            <ul>
+                <li>Programmed structured conditional statements (<code>if/elif/else</code> structures) to cross-reference menu strings with float values.</li>
+                <li>Implemented global tracking variables to maintain state data across custom function structures like cost math algorithms.</li>
+                <li>Developed validation control loops (<code>while True</code>) ensuring user interaction strings are filtered using string mutation routines like <code>.lower()</code> and <code>.strip()</code>.</li>
+                <li>Coded dynamic system modifiers to evaluate if multi-tier combos were present, modifying base order floats dynamically to subtract package discounts.</li>
+            </ul>
 
-        /* --- HERO SECTION --- */
-        header {
-            height: 90vh;
-            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), 
-                        url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 1rem;
-        }
+            <h4>Skills Exemplified & What I Learned</h4>
+            <ul>
+                <li><strong>Data Type Manipulation:</strong> Gained experience explicitly converting variables using <code>float()</code>, <code>int()</code>, and handling raw numerical strings gracefully via <code>.isdigit()</code> checks.</li>
+                <li><strong>Scope & Architecture:</strong> Learned how to leverage functions, loops, and global/local scope rules to manage multi-tiered user configurations cleanly.</li>
+                <li><strong>Defensive Programming:</strong> Mastered defensive programming concepts by building fall-backs that intercept invalid text inputs and safely prompt the user again without breaking the console runtime loop.</li>
+            </ul>
 
-        header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-        header p { font-size: 1.5rem; color: #cbd5e1; max-width: 600px; }
-
-        .cta-btn {
-            margin-top: 2rem;
-            padding: 0.8rem 2rem;
-            background-color: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-        .cta-btn:hover { transform: scale(1.05); }
-
-        /* --- SECTIONS --- */
-        section { padding: 5rem 10%; }
-        h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; position: relative; }
-        h2::after {
-            content: ''; display: block; width: 60px; height: 4px;
-            background: var(--accent); margin: 10px auto 0;
-        }
-
-        /* --- ABOUT --- */
-        .about-container { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
-        .about-text { flex: 1; min-width: 300px; }
-        .about-stats {
-            flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
-        }
-        .stat-card {
-            background: white; padding: 1.5rem; border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center;
-        }
-        .stat-number { font-size: 2rem; font-weight: bold; color: var(--accent); display: block; }
-
-        /* --- VIDEO STYLES --- */
-        .video-container {
-            display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;
-            max-width: 1100px; margin: 0 auto;
-        }
-        .video-wrapper { flex: 1; min-width: 320px; max-width: 500px; text-align: center; }
-        .video-wrapper iframe {
-            width: 100%; aspect-ratio: 16 / 9;
-            border: none; border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            background: #000;
-        }
-
-        /* --- HOBBIES --- */
-        .hobbies-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
-        .hobby-tag {
-            background: white; padding: 0.8rem 1.5rem; border-radius: 50px;
-            border: 1px solid #e2e8f0; font-weight: 500;
-        }
-
-        /* --- CONTACT --- */
-        #contact { background-color: var(--primary); color: white; text-align: center; }
-        .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
-        .contact-btn {
-            color: white; text-decoration: none; border: 1px solid var(--accent);
-            padding: 0.8rem 1.5rem; border-radius: 5px; transition: background 0.3s;
-        }
-        .contact-btn:hover { background: var(--accent); }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } 
-            section { padding: 3rem 5%; }
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="logo">Elliot<span>.</span></div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">CS Projects</a>
-            <a href="#hobbies">Hobbies</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-    <header>
-        <h1>Computer Science & Engineering</h1>
-        <p>Student Athlete | Coder | Mathematician</p>
-        <a href="#projects" class="cta-btn">View My Projects</a>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <div class="about-text">
-                <p>I am Elliot, a student-athlete combining the discipline of Cross Country with the logic of Computer Science. I specialize in building efficient solutions and analyzing data to solve real-world engineering challenges.</p>
+            <div class="project-media">
+                <img src="images/combo_menu_screenshot.png" alt="3.1.3 Combo Menu Python Code Terminal" class="project-img">
             </div>
-            <div class="about-stats">
-                <div class="stat-card"><span class="stat-number">4.0</span><span>GPA</span></div>
-                <div class="stat-card"><span class="stat-number">Python</span><span>Language</span></div>
-                <div class="stat-card"><span class="stat-number">CAD</span><span>Design</span></div>
-                <div class="stat-card"><span class="stat-number">XC</span><span>Varsity</span></div>
+
+            <div class="project-links">
+                <a href="#" class="btn project-link">View Source Code on GitHub</a>
             </div>
         </div>
-    </section>
 
-    <section id="projects" style="background-color: #f1f5f9;">
-        <h2>Computer Science Projects</h2>
-        <div class="video-container">
-            <div class="video-wrapper">
-                <iframe src="https://drive.google.com/file/d/1lfnwHSR406zLNYi8HiwK2tJAhOF71rZl/preview"></iframe>
-                <p style="margin-top: 15px; font-weight: 600;">System Implementation</p>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://drive.google.com/file/d/10EsGup0fPsIytP0MQKg5vfm_jzZfRuOk/preview"></iframe>
-                <p style="margin-top: 15px; font-weight: 600;">Technical Demo</p>
-            </div>
-        </div>
-    </section>
+        <div class="project-card">
+            <span class="project-tag">Algorithmic Design</span>
+            <h3>Project 2: 3.1.5 Rock Paper Scissors Algorithmic Challenge</h3>
+            <p class="project-meta"><strong>Course:</strong> Computer Science Essentials | <strong>Date:</strong> Fall 2025</p>
+            
+            <h4>Project Objective</h4>
+            <p>
+                The goal of this project was to design a predictive automation bot for a competitive Rock, Paper, Scissors game challenge. By analyzing historical matchup patterns and past round outcomes, the bot dynamically shifts through three distinct multi-tiered defensive counter-strategies to actively disrupt predictable or repetitive opponent behaviors.
+            </p>
 
-    <section id="hobbies">
-        <h2>Hobbies & Interests</h2>
-        <div class="hobbies-list">
-            <div class="hobby-tag">Robotics</div>
-            <div class="hobby-tag">3D Printing</div>
-            <div class="hobby-tag">Distance Running</div>
-            <div class="hobby-tag">Game Dev</div>
-        </div>
-    </section>
+            <h4>My Responsibilities</h4>
+            <ul>
+                <li>Programmed complex pattern tracking using Python list slice indexing (<code>[-1]</code> and <code>[-2]</code>) to extract real-time context from structural match arrays.</li>
+                <li>Architected recursive conditional boolean checks (<code>lost_last_round</code> and <code>lost_two_rounds_ago</code>) to map multi-turn history trends.</li>
+                <li>Designed a predictive state-machine with three fallback tiers: an anti-spam routine to defeat hardcoded opponent behaviors, a mirroring strategy for round losses, and an optimal outcome matrix for round victories.</li>
+                <li>Implemented structural boundary checks ensuring the system executes gracefully across early-stage rounds where historical tracking variables are null.</li>
+            </ul>
 
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-links">
-            <a href="mailto:ngo7364@MYDUSD.ORG" class="contact-btn">Email Me</a>
-            <a href="#" class="contact-btn">View Resume</a>
-            <a href="#" class="contact-btn">GitHub</a>
-        </div>
-        <footer style="margin-top: 3rem; font-size: 0.8rem; opacity: 0.6;">
-            <p>&copy; 2026 Elliot. All Rights Reserved.</p>
-        </footer>
-    </section>
+            <h4>Skills Exemplified & What I Learned</h4>
+            <ul>
+                <li><strong>Algorithmic Thinking:</strong> Mastered the translation of basic game logic into dynamic heuristic decision trees that adapt based on external data trends.</li>
+                <li><strong>Array Data Indexing:</strong> Developed a functional understanding of working with history strings and lists, accessing past states safely without creating index-out-of-range runtime errors.</li>
+                <li><strong>State Machine Management:</strong> Learned how prioritizing rule sequences can change system priorities dynamically based on changing operational conditions.</li>
+            </ul>
 
-</body>
-</html>
+            <div class="
