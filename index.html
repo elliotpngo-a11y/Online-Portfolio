@@ -11,7 +11,6 @@
             --light: #f8fafc;
             --gray: #64748b;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
@@ -20,8 +19,6 @@
             line-height: 1.6;
             background-color: var(--light);
         }
-
-        /* --- NAVIGATION --- */
         nav {
             display: flex;
             justify-content: space-between;
@@ -33,7 +30,6 @@
             top: 0;
             z-index: 1000;
         }
-
         .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
         .logo span { color: var(--accent); }
         .nav-links a {
@@ -44,8 +40,6 @@
             transition: color 0.3s;
         }
         .nav-links a:hover { color: var(--accent); }
-
-        /* --- HERO SECTION --- */
         header {
             height: 90vh;
             background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), 
@@ -61,10 +55,8 @@
             color: white;
             padding: 0 1rem;
         }
-
         header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
         header p { font-size: 1.5rem; color: #cbd5e1; max-width: 600px; }
-
         .cta-btn {
             margin-top: 2rem;
             padding: 0.8rem 2rem;
@@ -76,16 +68,12 @@
             transition: transform 0.2s;
         }
         .cta-btn:hover { transform: scale(1.05); }
-
-        /* --- SECTIONS --- */
         section { padding: 5rem 10%; }
         h2 { font-size: 2.5rem; margin-bottom: 2rem; text-align: center; position: relative; }
         h2::after {
             content: ''; display: block; width: 60px; height: 4px;
             background: var(--accent); margin: 10px auto 0;
         }
-
-        /* --- ABOUT --- */
         .about-container { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
         .about-text { flex: 1; min-width: 300px; }
         .about-stats {
@@ -96,8 +84,6 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center;
         }
         .stat-number { font-size: 2rem; font-weight: bold; color: var(--accent); display: block; }
-
-        /* --- RESUME SECTION (New Rubric Requirement) --- */
         .resume-layout {
             max-width: 1000px;
             margin: 0 auto;
@@ -120,8 +106,6 @@
             margin-bottom: 0.75rem;
         }
         .resume-item-details { color: var(--gray); font-size: 0.95rem; }
-
-        /* --- VIDEO STYLES --- */
         .video-container {
             display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;
             max-width: 1100px; margin: 0 auto;
@@ -146,15 +130,11 @@
             text-decoration: underline;
         }
         .project-docs-link:hover { color: var(--accent); }
-
-        /* --- HOBBIES --- */
         .hobbies-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
         .hobby-tag {
             background: white; padding: 0.8rem 1.5rem; border-radius: 50px;
             border: 1px solid #e2e8f0; font-weight: 500;
         }
-
-        /* --- CONTACT --- */
         #contact { background-color: var(--primary); color: white; text-align: center; }
         .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; }
         .contact-btn {
@@ -162,7 +142,6 @@
             padding: 0.8rem 1.5rem; border-radius: 5px; transition: background 0.3s;
         }
         .contact-btn:hover { background: var(--accent); }
-
         @media (max-width: 768px) {
             header h1 { font-size: 2.5rem; }
             .nav-links { display: none; } 
@@ -172,7 +151,6 @@
     </style>
 </head>
 <body>
-
     <nav>
         <div class="logo">Elliot<span>.</span></div>
         <div class="nav-links">
@@ -183,13 +161,11 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
-
     <header>
         <h1>Computer Science & Engineering</h1>
         <p>Student Athlete | Coder | Mathematician</p>
         <a href="#projects" class="cta-btn">View My Projects</a>
     </header>
-
     <section id="about">
         <h2>About Me</h2>
         <div class="about-container">
@@ -204,11 +180,9 @@
             </div>
         </div>
     </section>
-
     <section id="resume" style="background-color: #f8fafc;">
         <h2>My Resume</h2>
         <div class="resume-layout">
-            
             <div class="resume-section-title">Education</div>
             <div class="resume-item">
                 <div>
@@ -217,7 +191,6 @@
                 </div>
                 <div><strong>Graduating 2026</strong></div>
             </div>
-
             <div class="resume-section-title">Technical Experience & Skills</div>
             <div class="resume-item">
                 <div>
@@ -229,7 +202,6 @@
                     <strong>Engineering & Physical Computing:</strong> Hardware prototyping, Computer-Aided Design (CAD), 3D printing configurations, and basic robotics systems development.
                 </div>
             </div>
-
             <div class="resume-section-title">Athletics & Leadership</div>
             <div class="resume-item">
                 <div>
@@ -240,11 +212,9 @@
             </div>
         </div>
     </section>
-
     <section id="projects" style="background-color: #f1f5f9;">
         <h2>Computer Science Projects</h2>
         <div class="video-container">
-            
             <div class="video-wrapper">
                 <iframe src="https://drive.google.com/file/d/1lfnwHSR406zLNYi8HiwK2tJAhOF71rZl/preview"></iframe>
                 <div class="project-title">System Implementation</div>
@@ -254,7 +224,6 @@
                 <p class="project-desc"><strong>What I Learned:</strong> Gained deep experience in real-time error debugging, managing software version logs via Git, and working directly with complex systemic inputs.</p>
                 <a href="https://drive.google.com/file/d/1lfnwHSR406zLNYi8HiwK2tJAhOF71rZl/view" target="_blank" class="project-docs-link">📁 View System Source Files & Documentation</a>
             </div>
-            
             <div class="video-wrapper">
                 <iframe src="https://drive.google.com/file/d/10EsGup0fPsIytP0MQKg5vfm_jzZfRuOk/preview"></iframe>
                 <div class="project-title">Technical Demo</div>
@@ -264,10 +233,8 @@
                 <p class="project-desc"><strong>What I Learned:</strong> Refined technical proofing processes, improved standard performance diagnostic analysis, and mastered translating raw code structures into interactive visual models.</p>
                 <a href="https://drive.google.com/file/d/10EsGup0fPsIytP0MQKg5vfm_jzZfRuOk/view" target="_blank" class="project-docs-link">📁 View Technical Project Specifications</a>
             </div>
-
         </div>
     </section>
-
     <section id="hobbies">
         <h2>Hobbies & Interests</h2>
         <div class="hobbies-list">
@@ -277,7 +244,6 @@
             <div class="hobby-tag">Game Dev</div>
         </div>
     </section>
-
     <section id="contact">
         <h2>Get In Touch</h2>
         <div class="contact-links">
@@ -289,6 +255,5 @@
             <p>&copy; 2026 Elliot. All Rights Reserved.</p>
         </footer>
     </section>
-
 </body>
 </html>
